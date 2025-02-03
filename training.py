@@ -15,7 +15,7 @@ import matplotlib.pylab as plt
 '''
 (ADAM)
 batch => 128
-- alpha = 0.001 => 0.9920 at 13 epochs and 0.9819 at 1 epochs
+- alpha = 0.001 => 0.9948 at 17 epochs and 0.9819 at 1 epochs
 - alpha = 0.01 => 0.9762 at 10 epochs and 0.9450 at 1 epochs
 - alpha = 0.1 => 0.1135 at 10 epochs and 0.1028 at 1 epochs
 batch=> 256
@@ -66,7 +66,7 @@ def train_model():
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
     """
-    (ADAM) => 0.9922 at 13 epochs
+    (ADAM) => 0.9948 at 17 epochs
     (SGD with momentum) => 0.9858 at 17 epochs.
     (ADAM with weight decay) => 0.9903 at 14 epochs.
 
