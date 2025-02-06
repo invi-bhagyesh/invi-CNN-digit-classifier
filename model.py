@@ -13,7 +13,7 @@ class MNISTCNN(nn.Module):
         '''
         1conv => 0.9902 at 19 epochs
         2conv => 0.9937 at 10 epochs
-        3conv => 0.9943 at 14 epochs
+        3conv => 0.9948 at 17 epochs
         '''
         super().__init__()
         self.conv1 = nn.Sequential(
