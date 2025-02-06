@@ -6,13 +6,6 @@ import numpy as np
 from sklearn.metrics import classification_report, confusion_matrix
 
 def evaluate_model(model_path, batch_size=512):
-    """
-    Evaluate trained model on MNIST test set
-    
-    Args:
-        model_path (str): Path to saved model weights
-        batch_size (int): Batch size for evaluation
-    """
     device = torch.device("cpu")
     
     # Load model
