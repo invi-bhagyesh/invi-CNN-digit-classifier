@@ -4,20 +4,12 @@ from torchinfo import summary
 
 class MNISTCNN(nn.Module):
     """
-    CNN architecture for MNIST digit classification
-    Architecture:
     - Two convolutional blocks (conv + relu + maxpool)
-    - Two fully connected layers with dropout
+    - one fully connected layers with dropout
     - Output layer with 10 classes
     """
     
     def __init__(self, dropout_rate=0.5):
-        """
-        Initialize the CNN model layers
-        
-        Args:
-            dropout_rate (float): Dropout probability for regularization
-        """
         '''
         1conv => 0.9902 at 19 epochs
         2conv => 0.9937 at 10 epochs
@@ -61,7 +53,4 @@ class MNISTCNN(nn.Module):
         return self.fc(x)
 
     def summary(self, input_size=(1, 1, 28, 28)):
-        """
-        Print model summary including output shapes and parameters
-        """
         return summary(self, input_size=input_size, col_names=["input_size", "output_size", "num_params"])
