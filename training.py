@@ -1,7 +1,3 @@
-"""
-Training script for MNIST CNN model
-Includes data loading, training loop, validation, and model saving
-"""
 
 import torch
 import torch.nn as nn
@@ -60,7 +56,7 @@ def get_dataloaders():
 
 
 def train_model():
-    """Main training pipeline"""
+    """Main training"""
     # Initialize model, loss, optimizer
     model = MNISTCNN().to(DEVICE)
     criterion = nn.CrossEntropyLoss()
